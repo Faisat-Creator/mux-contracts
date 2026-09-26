@@ -75,3 +75,12 @@ jobs:
 
       - name: Run tests
         run: cargo test --workspace
+
+      - name: Validate version synchronization
+        run: bash scripts/sync-versions.sh --check
+
+      - name: Validate ABI breaking-change process
+        run: bash scripts/check-breaking-change.sh
+
+      - name: Validate local invoke smoke CLI
+        run: bash scripts/test-local-invoke-smoke.sh

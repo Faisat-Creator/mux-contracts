@@ -30,7 +30,8 @@
     "local-invoke": "npx ts-node src/local-invoke.ts",
     "generate": "bash ../scripts/generate-bindings.sh",
     "generate:bindings": "npx ts-node ../scripts/generate-bindings.ts",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "simulate-batch": "npm run build && node dist/simulate-batch.js"
   },
   "keywords": [
     "stellar",
